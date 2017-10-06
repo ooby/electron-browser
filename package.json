@@ -1,22 +1,25 @@
 {
-  "name": "electron-browser",
-  "version": "1.0.0",
-  "description": "browser ui for electron, written in react",
+  "name": "java-electron-browser",
+  "productName": "JEB",
+  "version": "1.0.1",
+  "description": "browser ui for electron, written in react, java bindings support",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "keywords": [
     "electron",
     "browser",
     "webview",
-    "react"
+    "react",
+    "java"
   ],
-  "author": "Paul Frazee <pfrazee@gmail.com>",
+  "author": "Afanasy Argunov <afanasy@argunov.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.28.2"
+    "electron-prebuilt": "^0.37.8",
+    "electron-rebuild": "^1.3.0"
   },
   "dependencies": {
+    "java": "^0.9.0"
   }
 }
