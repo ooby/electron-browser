@@ -1,7 +1,7 @@
 {
   "name": "java-electron-browser",
   "productName": "JEB",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "browser ui for electron, written in react, java bindings support",
   "scripts": {
     "start": "electron ."
@@ -20,6 +20,7 @@
     "electron-rebuild": "^1.3.0"
   },
   "dependencies": {
-    "java": "^0.9.0"
+    "java": "^0.9.0",
+    "nconf": "^0.8.5"
   }
 }

@@ -8,7 +8,7 @@ This is fork of [electron-browser](https://github.com/pfrazee/electron-browser) 
 
 ### Prerequisites
 
-**IMPORTANT** All node-java [requirements](https://github.com/joeferner/node-java#installation) must be completed
+**IMPORTANT** All node-java [requirements](https://github.com/joeferner/node-java#installation) must be satisfied
 
 1. Windows x86/x64
 2. [Visual C++ 2015 build tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
@@ -18,6 +18,14 @@ This is fork of [electron-browser](https://github.com/pfrazee/electron-browser) 
 6. electron-packager - `npm i -g electron-packager`
 7. `python`, `javac` in `PATH`
 8. node-gyp - `npm i -g node-gyp`
+9. modify `config/config.json` file as below:
+```json
+{
+    "defaults": {
+        "location": "https://argunov.com" // Homepage URL
+    }
+}
+```
 
 ### Build instructions
 
@@ -29,4 +37,16 @@ cp ./node_modules/java/build/jvm_dll_path.json .
 ./node_modules/.bin/electron-rebuild
 mv jvm_dll_path.json ./node_modules/java/build/
 electron-packager .
+```
+
+Also, you can use one of build scripts `pack.cmd` or `pack.sh`
+
+### Run for test or development
+
+```bash
+npm install
+cp ./node_modules/java/build/jvm_dll_path.json .
+./node_modules/.bin/electron-rebuild
+mv jvm_dll_path.json ./node_modules/java/build/
+npm start
 ```

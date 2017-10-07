@@ -45,7 +45,7 @@ var BrowserPage = React.createClass({
       this.navigateTo(this.props.page.location)
   },
   componentWillUnmount: function () {
-    window.removeEventListener('resize', resize)    
+    window.removeEventListener('resize', resize)
   },
 
   navigateTo: function (l) {
@@ -54,7 +54,7 @@ var BrowserPage = React.createClass({
   },
 
   onPageSearch: function (query) {
-    this.refs.webview.getDOMNode().executeJavaScript('window.find("'+query+'", 0, 0, 1)')
+    this.refs.webview.getDOMNode().executeJavaScript('window.find("' + query + '", 0, 0, 1)')
   },
 
   render: function () {
@@ -63,10 +63,10 @@ var BrowserPage = React.createClass({
       <webview ref="webview" preload="./preload/main.js" onContextMenu={this.props.onContextMenu} />
       <BrowserPageStatus page={this.props.page} />
     </div>
-  }  
+  }
 })
 
-function webviewHandler (self, fnName) {
+function webviewHandler(self, fnName) {
   return function (e) {
     if (self.props[fnName])
       self.props[fnName](e, self.props.page, self.props.pageIndex)
@@ -89,7 +89,7 @@ var webviewEvents = {
   'console-message': 'onConsoleMessage'
 }
 
-function resize () {
+function resize() {
   Array.prototype.forEach.call(document.querySelectorAll('webview'), function (webview) {
     var obj = webview && webview.querySelector('::shadow object')
     if (obj)
