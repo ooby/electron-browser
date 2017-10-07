@@ -1,7 +1,7 @@
 {
   "name": "java-electron-browser",
   "productName": "JEB",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "browser ui for electron, written in react, java bindings support",
   "scripts": {
     "start": "electron ."

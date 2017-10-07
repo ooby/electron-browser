@@ -51,6 +51,7 @@ var BrowserPage = React.createClass({
   navigateTo: function (l) {
     var webview = this.refs.webview.getDOMNode()
     webview.setAttribute('src', l)
+    webview.setAttribute('nodeintegration', '')
   },
 
   onPageSearch: function (query) {
